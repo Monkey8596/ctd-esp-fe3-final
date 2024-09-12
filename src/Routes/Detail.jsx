@@ -1,36 +1,37 @@
 import axios from "axios"
-import { useEffect, useState } from "react"
+import { useEffect, useReducer, useState } from "react"
 import { useParams } from "react-router-dom"
+import { reducer } from "../Reducer/reducer"
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
-
+// const initialState = {
+//   detail: {}
+// };
 
 const Detail = () => {
  
-  // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
   const [detail,setDetail] = useState({})
+  // const {state,dispatch} = useReducer(reducer,initialState)
   const {id} = useParams()
   
   const url = `https://jsonplaceholder.typicode.com/users/${id}`
   
-
   useEffect(()=>{
-    axios(url).then((res)=>{
-      setDetail(res.data)   
-    })},[])
+      axios(url).then((res)=>{
+        setDetail(res.data)
+        // dispatch({type: "GET_DENTIST", payload: res.data})
+      })
+  },[])
 
   return (
     <>
       <h1>Detail Dentist {id} </h1>
-      {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
-      {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
       <div>
-        <div> {detail.name} </div>
-        <div> {detail.email} </div>
-        <div> {detail.phone} </div>
-        <div> {detail.website} </div>
-        info
+        <p>Name: {detail.name} </p>
+        <p>Email: {detail.email} </p>
+        <p>Phone: {detail.phone} </p>
+        <p>Website: {detail.website} </p>
       </div>
     </>
   )

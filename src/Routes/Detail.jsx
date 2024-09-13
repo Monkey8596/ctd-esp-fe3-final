@@ -1,18 +1,14 @@
 import axios from "axios"
 import { useEffect, useReducer, useState } from "react"
 import { useParams } from "react-router-dom"
-import { reducer } from "../Reducer/reducer"
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
-// const initialState = {
-//   detail: {}
-// };
 
 const Detail = () => {
  
   const [detail,setDetail] = useState({})
-  // const {state,dispatch} = useReducer(reducer,initialState)
+
   const {id} = useParams()
   
   const url = `https://jsonplaceholder.typicode.com/users/${id}`
@@ -20,7 +16,6 @@ const Detail = () => {
   useEffect(()=>{
       axios(url).then((res)=>{
         setDetail(res.data)
-        // dispatch({type: "GET_DENTIST", payload: res.data})
       })
   },[])
 

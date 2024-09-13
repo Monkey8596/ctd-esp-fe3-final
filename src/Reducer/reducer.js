@@ -2,7 +2,8 @@ export const reducer = (state, action) => {
 
     switch (action.type) {
         case "TOGGLE_THEME":
-            return {}
+            const newTheme = state.theme === "dark" ? "light" : "dark";
+            return {...state, theme: newTheme};
         case 'GET_DENTISTS':
             return {...state, dentists: action.payload}
         case "GET_DENTIST":

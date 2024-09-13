@@ -23,12 +23,53 @@ h1{
   text-align: center;
 }
 
-nav{
+/* nav{
   display: flex;
   width: 80vw;
   justify-content: flex-start;
   padding: 1rem;
+} */
+
+/* Asegúrate de incluir estos estilos en tu archivo CSS */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--navbar-background); /* Opcional: Definir color de fondo */
 }
+
+nav img {
+  height: 40px; /* Ajusta el tamaño del logo según sea necesario */
+  margin-right: 1rem;
+}
+
+nav .links {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Espacio entre los enlaces */
+}
+
+nav button {
+  background-color: #007bff; /* Color de fondo del botón */
+  color: white; /* Color del texto */
+  border: none;
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Efecto de transición */
+}
+
+nav button:hover {
+  background-color: #0056b3; /* Color del botón al pasar el cursor */
+  transform: scale(1.05); /* Efecto de escala al pasar el cursor */
+}
+
+nav button:focus {
+  outline: none; /* Quitar el borde del foco */
+}
+
 
 a{
   color: #000;

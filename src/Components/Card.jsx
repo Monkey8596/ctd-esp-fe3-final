@@ -12,7 +12,7 @@ const Card = ({ dentist }) => {
 
   return (
     <div className="card">
-        <img src="/doctor.jpg" alt="" width={200}/>
+        <img src="/images/doctor.jpg" alt="" width={200}/>
         <Link to={'/detail/' + dentist.id}><h3>{dentist.name}</h3></Link>
         <h3>{dentist.username}</h3>
         <button onClick={addFav} className="favButton">{isFav ? '❤️' : '⭐' }</button>

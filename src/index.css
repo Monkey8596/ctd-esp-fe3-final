@@ -11,37 +11,50 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.favButton{
-  background-color: rgba(136, 136, 136, 0.116);
-  padding: 10px;
+
+.favButton {
+  background-color: #f0f0f0; /* Color de fondo */
+  padding: 10px 10px;
   border: none;
-  width: 100%;
+  border-radius: 0; /* Hacer el botón redondo */
   cursor: pointer;
+  font-size: 1.5rem; /* Tamaño del ícono */
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Suavizar la animación */
 }
 
-h1{
+.favButton:hover {
+  background-color: #ffcccc; /* Cambia el color al pasar el cursor */
+  transform: scale(1.1); /* Aumentar ligeramente el tamaño al hacer hover */
+}
+
+.favButton:active {
+  transform: scale(0.9); /* Reducir tamaño al presionar */
+}
+
+
+h1 {
   text-align: center;
 }
 
-/* nav{
-  display: flex;
-  width: 80vw;
-  justify-content: flex-start;
-  padding: 1rem;
-} */
-
-/* Asegúrate de incluir estos estilos en tu archivo CSS */
+:root {
+  --navbar-background-light: #70a7cc; /* Color claro para el navbar */
+  --navbar-background-dark: #121212; /* Color oscuro para el navbar */
+  --footer-background-light: #70a7cc; /* Color claro para el footer */
+  --footer-background-dark: #121212; /* Color oscuro para el footer */
+  --footer-text: #ffffff; /* Color del texto en el footer */
+}
 
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  background-color: var(--navbar-background); /* Opcional: Definir color de fondo */
+  background-color: var(--navbar-background-light); /* Color del fondo del navbar por defecto */
 }
 
 nav img {
-  height: 40px; /* Ajusta el tamaño del logo según sea necesario */
+  height: 40px; /* Tamaño del logo */
   margin-right: 1rem;
 }
 
@@ -70,39 +83,74 @@ nav button:focus {
   outline: none; /* Quitar el borde del foco */
 }
 
+/* Cuando el tema es oscuro */
+body.dark-mode nav {
+  background-color: var(--navbar-background-dark);
+}
 
-a{
+nav.dark .links a {
+  color: white; /* Cambia el color del texto de los enlaces a blanco */
+}
+
+nav.dark .links a:hover {
+  color: #ddd; /* Opcional: Cambia el color de los enlaces al pasar el cursor en el tema oscuro */
+}
+
+a {
   color: #000;
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
 }
-a:hover{
+
+a:hover {
   color: rgb(136, 136, 136);
-} 
+}
 
 footer {
   display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  position: relative;
-  bottom: 0;
-  width: 90%;
-  height: 40px;
-  margin-top: 2rem;
+  justify-content: space-between; /* Alinea contenido a los extremos */
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--footer-background-light); /* Fondo del footer por defecto */
+  color: var(--footer-text); /* Color del texto del footer */
 }
 
-footer > img{
-  width: 200px;
-  margin: 0;
-}
-footer > p{
-  margin: 0;
-  padding-top: 0.7rem;
+footer .footer-content {
+  display: flex;
+  align-items: center;
 }
 
-form{
+footer p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+footer .social-icons {
+  display: flex;
+  gap: 1rem; /* Espacio entre los íconos */
+}
+
+footer img {
+  height: 30px; /* Tamaño de los íconos */
+}
+
+/* Cambia el color de fondo del footer en el tema oscuro */
+body.dark-mode footer {
+  background-color: var(--footer-background-dark);
+}
+
+/* Cambia el color del texto en el footer cuando el tema es oscuro */
+body.dark-mode footer {
+  color: #ffffff;
+}
+
+body.dark-mode footer a {
+  color: #ffffff;
+}
+
+form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -111,9 +159,9 @@ form{
   margin: 0 auto;
 }
 
-.card{
+.card {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
   width: 200px;
@@ -121,11 +169,11 @@ form{
   border: 0.5px solid rgb(136, 136, 136);
 }
 
-.card:hover{
+.card:hover {
   border: 0.5px solid rgb(206, 217, 142);
 }
 
-.card-grid{
+.card-grid {
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
@@ -136,12 +184,11 @@ form{
 }
 
 table {
- border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    display: table;
-    border: 1px solid #ccc;
-
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+  border: 1px solid #ccc;
 }
 
 td, th {
@@ -154,10 +201,11 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-.dark{
+.dark {
   background-color: #12121296;
   color: white;
 }
+
 .dark > a {
   color: white;
 }

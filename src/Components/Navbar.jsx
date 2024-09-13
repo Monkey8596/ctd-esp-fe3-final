@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav>
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
-      <img src="/favicon.ico" alt="" />
+      <img src="/public/images/doctor.jpg" alt="" />
       <Link to={'/'} ><h4>Home</h4></Link>
       <Link to={'/contact'} ><h4>Contact</h4></Link>
       <Link to={'/favs'} ><h4>Favs</h4></Link>

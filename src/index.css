@@ -15,35 +15,34 @@ code {
 }
 
 .favButton {
-  background-color: #f0f0f0; /* Color de fondo */
+  background-color: #f0f0f0;
   padding: 10px 10px;
   border: none;
-  border-radius: 0; /* Hacer el botón redondo */
+  border-radius: 0; 
   cursor: pointer;
-  font-size: 1.5rem; /* Tamaño del ícono */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Suavizar la animación */
+  font-size: 1.5rem; 
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .favButton:hover {
-  background-color: #ffcccc; /* Cambia el color al pasar el cursor */
-  transform: scale(1.1); /* Aumentar ligeramente el tamaño al hacer hover */
+  background-color: #ffcccc;
+  transform: scale(1.1); 
 }
 
 .favButton:active {
-  transform: scale(0.9); /* Reducir tamaño al presionar */
+  transform: scale(0.9); 
 }
-
 
 h1 {
   text-align: center;
 }
 
 :root {
-  --navbar-background-light: #70a7cc; /* Color claro para el navbar */
-  --navbar-background-dark: #121212; /* Color oscuro para el navbar */
-  --footer-background-light: #70a7cc; /* Color claro para el footer */
-  --footer-background-dark: #121212; /* Color oscuro para el footer */
-  --footer-text: #ffffff; /* Color del texto en el footer */
+  --navbar-background-light: #70a7cc;
+  --navbar-background-dark: #121212; 
+  --footer-background-light: #70a7cc;
+  --footer-background-dark: #121212; 
+  --footer-text: #ffffff; 
 }
 
 nav {
@@ -51,50 +50,49 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  background-color: var(--navbar-background-light); /* Color del fondo del navbar por defecto */
+  background-color: var(--navbar-background-light); 
 }
 
 nav img {
-  height: 40px; /* Tamaño del logo */
+  height: 40px; 
   margin-right: 1rem;
 }
 
 nav .links {
   display: flex;
   align-items: center;
-  gap: 1rem; /* Espacio entre los enlaces */
+  gap: 1rem; 
 }
 
 nav button {
-  background-color: #007bff; /* Color de fondo del botón */
-  color: white; /* Color del texto */
+  background-color: #007bff; 
+  color: white; 
   border: none;
-  padding: 0.5rem 1rem; /* Espaciado interno */
-  border-radius: 5px; /* Bordes redondeados */
+  padding: 0.5rem 1rem; 
+  border-radius: 5px; 
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s; /* Efecto de transición */
+  transition: background-color 0.3s, transform 0.3s; 
 }
 
 nav button:hover {
-  background-color: #0056b3; /* Color del botón al pasar el cursor */
-  transform: scale(1.05); /* Efecto de escala al pasar el cursor */
+  background-color: #0056b3; 
+  transform: scale(1.05); 
 }
 
 nav button:focus {
-  outline: none; /* Quitar el borde del foco */
+  outline: none; 
 }
 
-/* Cuando el tema es oscuro */
 body.dark-mode nav {
   background-color: var(--navbar-background-dark);
 }
 
 nav.dark .links a {
-  color: white; /* Cambia el color del texto de los enlaces a blanco */
+  color: white; 
 }
 
 nav.dark .links a:hover {
-  color: #ddd; /* Opcional: Cambia el color de los enlaces al pasar el cursor en el tema oscuro */
+  color: #ddd; 
 }
 
 a {
@@ -111,12 +109,12 @@ a:hover {
 footer {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Alinea contenido a los extremos */
+  justify-content: space-between; 
   align-items: center;
   padding: 1rem 1rem;
-  background-color: var(--footer-background-light); /* Fondo del footer por defecto */
-  color: var(--footer-text); /* Color del texto del footer */
-  left: 0;  /* Alinea el footer al borde izquierdo */
+  background-color: var(--footer-background-light); 
+  color: var(--footer-text); 
+  left: 0;  
   right: 0;
   position: absolute;
   bottom: 0;
@@ -136,20 +134,18 @@ footer p {
 
 footer .social-icons {
   display: flex;
-  gap: 1rem; /* Espacio entre los íconos */
+  gap: 1rem; 
   
 }
 
 footer img {
-  height: 30px; /* Tamaño de los íconos */
+  height: 30px; 
 }
 
-/* Cambia el color de fondo del footer en el tema oscuro */
 body.dark-mode footer {
   background-color: var(--footer-background-dark);
 }
 
-/* Cambia el color del texto en el footer cuando el tema es oscuro */
 body.dark-mode footer {
   color: #ffffff;
 }
@@ -220,7 +216,6 @@ tr:nth-child(even) {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  flex-grow: 1;
   min-height: calc(100vh - 300px)
 }
 
@@ -261,18 +256,29 @@ button[type="submit"] {
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   margin: 2rem auto;
+  text-align: center;
 }
 
-.detail-container h1 {
+
+.detail-container img {
+  border-radius: 50%; 
+  width: 80px; 
+  height: 80px; 
+  margin-bottom: 1rem; 
+}
+
+
+h1 {
   font-size: 2rem;
   color: #333;
   margin-bottom: 1.5rem;
 }
+
 
 .detail-container p {
   font-size: 1rem;
@@ -291,7 +297,7 @@ button[type="submit"] {
     margin: 1rem;
   }
 
-  .detail-container h1 {
+  h1 {
     font-size: 1.5rem;
   }
 

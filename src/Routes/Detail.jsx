@@ -1,8 +1,6 @@
 import axios from "axios"
-import { useEffect, useReducer, useState } from "react"
+import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 
 const Detail = () => {
@@ -23,7 +21,7 @@ const Detail = () => {
     <>
       <h1>Detail Dentist {id} </h1>
       <div className="detail-container">
-      <img src="/images/doctor.jpg" alt="" width={200}/>
+        <img src="/images/doctor.jpg" alt=""/>
         <p>Name: {detail.name} </p>
         <p>Email: {detail.email} </p>
         <p>Phone: {detail.phone} </p>

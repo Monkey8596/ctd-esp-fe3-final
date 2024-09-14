@@ -9,7 +9,7 @@ const lsFavs = JSON.parse(localStorage.getItem("favs")) || [];
 export const initialState = {
   dentists: [],
   favs: lsFavs,
-  theme: "light", //, data: [],
+  theme: "light",
 };
 
 export const ContextProvider = ({ children }) => {

@@ -1,6 +1,11 @@
+import { useDentistStates } from "./utils/global.context";
+
 const Footer = () => {
+
+  const {state} = useDentistStates()
+
   return (
-    <footer>
+    <footer className={state.theme === "dark" ? "dark" : ""}>
       <div className="footer-content">
         <p>Powered by</p>
         <img src="/images/DH.png" alt="DH-logo" />

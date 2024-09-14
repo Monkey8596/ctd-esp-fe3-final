@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 const Form = () => {
   
   const [name,setName] = useState('') 
@@ -25,8 +26,8 @@ const Form = () => {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div >
+      <form onSubmit={handleSubmit} className="home-container">
         <input 
           type="text"
           placeholder="Name"

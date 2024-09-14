@@ -22,7 +22,8 @@ const Detail = () => {
   return (
     <>
       <h1>Detail Dentist {id} </h1>
-      <div>
+      <div className="detail-container">
+      <img src="/images/doctor.jpg" alt="" width={200}/>
         <p>Name: {detail.name} </p>
         <p>Email: {detail.email} </p>
         <p>Phone: {detail.phone} </p>

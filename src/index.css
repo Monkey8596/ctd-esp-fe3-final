@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  min-height: 100vh;
 }
 
 code {
@@ -19,7 +21,6 @@ code {
   border-radius: 0; /* Hacer el botón redondo */
   cursor: pointer;
   font-size: 1.5rem; /* Tamaño del ícono */
-  margin-bottom: 10px;
   transition: background-color 0.3s ease, transform 0.3s ease; /* Suavizar la animación */
 }
 
@@ -109,12 +110,18 @@ a:hover {
 
 footer {
   display: flex;
+  align-items: center;
   justify-content: space-between; /* Alinea contenido a los extremos */
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 1rem;
   background-color: var(--footer-background-light); /* Fondo del footer por defecto */
   color: var(--footer-text); /* Color del texto del footer */
+  left: 0;  /* Alinea el footer al borde izquierdo */
+  right: 0;
+  position: absolute;
+  bottom: 0;
 }
+
 
 footer .footer-content {
   display: flex;
@@ -130,6 +137,7 @@ footer p {
 footer .social-icons {
   display: flex;
   gap: 1rem; /* Espacio entre los íconos */
+  
 }
 
 footer img {
@@ -150,38 +158,6 @@ body.dark-mode footer a {
   color: #ffffff;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 300px;
-  height: 100px;
-  margin: 0 auto;
-}
-
-.card {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  align-items: center;
-  width: 200px;
-  padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
-}
-
-.card:hover {
-  border: 0.5px solid rgb(206, 217, 142);
-}
-
-.card-grid {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 1rem;
-  width: 90vw;
-  height: auto;
-  flex-wrap: wrap;
-  margin: 0 auto;
-}
 
 table {
   border-collapse: collapse;
@@ -208,4 +184,118 @@ tr:nth-child(even) {
 
 .dark > a {
   color: white;
+}
+
+.card {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border: 0.5px solid rgb(136, 136, 136);
+}
+
+.card:hover {
+  border: 0.5px solid rgb(206, 217, 142);
+}
+
+.card-grid {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  width: 90vw;
+  height: auto;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+
+
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: calc(100vh - 300px)
+}
+
+.contact h2, .contact p {
+  margin: 10px 0;
+  padding: 0.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 300px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.detail-container h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.detail-container p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+.detail-container p span {
+  font-weight: bold;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .detail-container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .detail-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .detail-container p {
+    font-size: 0.9rem;
+  }
 }
